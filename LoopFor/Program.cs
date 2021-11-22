@@ -16,6 +16,25 @@ namespace LoopFor
     {
         static void Main(string[] args)
         {
+            int numder;
+            #region Входные данные
+            Console.WriteLine("Введите целое число: ");
+            numder = Convert.ToInt32(Console.ReadLine());
+            #endregion
+
+            int sum = 0;
+            Console.WriteLine("");
+            for (int i = 0; i < 2 * numder; i++)
+            {
+
+                if ((i % 2) != 0)
+                {
+                    sum = sum + i;
+                    Console.WriteLine(sum);                    
+                }
+
+            }
+            Console.ReadKey();
         }
     }
 }
