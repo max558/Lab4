@@ -32,7 +32,6 @@ namespace LoopFor
                     sum = sum + i;
                     Console.WriteLine(sum);                    
                 }
-
             }
             Console.ReadKey();
         }
