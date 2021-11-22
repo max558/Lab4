@@ -14,6 +14,37 @@ namespace LoopDo
     {
         static void Main(string[] args)
         {
+            int numder,
+                numPositive = 0,
+                numNegative = 0;
+            Console.WriteLine("Введите последовательность чисел (для завершения введите 0): ");
+            do
+            {
+                Console.Write("Введите число в последовательность: ");
+                numder = Convert.ToInt32(Console.ReadLine());
+                if (numder > 0)
+                {
+                    numPositive++;
+                }
+                if (numder < 0)
+                {
+                    numNegative++;
+                }
+
+            } while (numder != 0);
+            string numStr="";
+
+            if (numPositive> numNegative)
+            {
+                numStr = "больше";
+            }
+            else
+            {
+                numStr = "меньше";
+            }
+
+            Console.WriteLine("Количество положительных чисел {0}, {1}, чем количество отрицательных чисел {2}", numPositive, numStr, numNegative);
+            Console.ReadKey();
         }
     }
 }
